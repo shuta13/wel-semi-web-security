@@ -3,6 +3,7 @@
 
 ### セットアップ
 1. docker for mac を起動(アプリケーションの中のdockerのアイコンをクリックでok)
+![](https://github.com/shuta13/wel-semi-web-security/blob/images/images/docker-icon.png)
 
 2. terminal.appを起動し、以下をのコマンドを実行
 
@@ -21,4 +22,4 @@ docker-compose up -d
 ```
 
 5. http://localhost:8080 に接続して、この画面が表示されればOK！
-
+![](https://github.com/shuta13/wel-semi-web-security/blob/images/images/phpinfo.png)
