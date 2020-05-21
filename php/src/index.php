@@ -1,2 +1,4 @@
 <?php
-phpinfo();
+include_once "./tips.php";
+
+print $str;
