@@ -10,10 +10,12 @@
   </p>
 
   <ul>
-    <li>好きな数字(idが存在する場合は検索結果に表示)</li>
+    <li>適当な数字1桁</li>
     <li>0 OR TRUE; --</li>
     <li>0 OR TRUE; DELETE FROM ws_table; --</li>
   </ul>
+
+  <h3>検索条件を入力</h3>
 
   <form method="POST" action="index.php">
     <input type="text" name="id" />
