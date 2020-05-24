@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 // 1-1
 $str = "PHPはPHP:Hypertext Preprocessorの略です";
 print mb_strrpos($str, "PHP");
