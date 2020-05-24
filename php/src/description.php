@@ -12,13 +12,13 @@
   <h3>インデックス</h3>
   <ul>
     <li>
-      <a href="/attack/xss.php">XSS(クロスサイトスクリプティング)</a>
+      <a href="/attack/xss/index.php">XSS(クロスサイトスクリプティング)</a>
     </li>
     <li>
-      <a href="/attack/csrf.php">CSRF(クロスサイトリクエストフォージェリ)</a>
+      <a href="/attack/csrf/index.php">CSRF(クロスサイトリクエストフォージェリ)</a>
     </li>
     <li>
-      <a href="/attack/sql_injection.php">SQLインジェクション</a>
+      <a href="/attack/sql_injection/index.php">SQLインジェクション</a>
     </li>
   </ul>
 </div>
