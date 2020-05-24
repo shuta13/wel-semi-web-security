@@ -9,7 +9,7 @@
     <i>データベースにユーザーを追加する</i>
   </p>
 
-  <h3>追加前</h3>
+  <h3>強制的に別のデータが追加される前</h3>
 
   <table border="1">
     <tbody><tr>
@@ -40,38 +40,46 @@
   </table>
 
   <p style="color: gray;">
-    <i>以下のユーザーを新しく追加しようとする</i>
+    <i>データを新しく追加しようとするが...</i>
   </p>
 
-  <ul>
-    <li>Zeppeli</li>
-    <li>Diego Brando</li>
-  </ul>
-
   <form method="POST" action="index.php">
-    <input type="text" name="name" />
+    <input type="text" name="name" value="" />
     <input type="submit" value="送信" />
   </form>
+
   <?php
-    try {
-      $dsn = "mysql:host=ws_mysql;dbname=ws_db;";
-      $user = "root";
-      $password = "root";
-      $db = new PDO($dsn, $user, $password);
+    if ($_POST["name"] !== null || $_POST["name"] !== "") {
+      try {
+        $dsn = "mysql:host=ws_mysql;dbname=ws_db;";
+        $user = "root";
+        $password = "root";
+        $db = new PDO($dsn, $user, $password);
 
-      $name = $_POST["name"];
-    
-      // データ追加用クエリ
-      $sql = "INSERT INTO ws_table (name) VALUES (:name)";
+        $name = $_POST["name"];
 
-      $stt = $db->prepare($sql);
-      $stt->bindValue(":name", $_POST["name"]);
-      $stt->execute();
-    } catch (PDOException $e) {
-      echo $e;
-      exit;
+        if ($name != "") {
+          // データ追加用クエリ
+          $sql = "INSERT INTO ws_table (name) VALUES (:name)";
+  
+          $stt = $db->prepare($sql);
+          $stt->bindValue(":name", $_POST["name"]);
+          $stt->execute();
+        }
+      } catch (PDOException $e) {
+        echo $e;
+        exit;
+      }
     }
   ?>
+
+  <p style="color: gray;">
+    <i>気の迷いで以下のリンクをクリックしてしまったとする</i>
+  </p>
+
+  <p>
+    <a href="./fake.php">みんなでもらった10万円集めて大仏を建てよう！詳しくはこのリンクをクリック！</a>
+  </p>
 
   <h3>強制的に別のデータが追加された結果</h3>
 
