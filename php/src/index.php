@@ -11,7 +11,10 @@ try {
   $s = $db->prepare($sql);
   $s->execute();
   $result = $s->fetchAll(PDO::FETCH_ASSOC);
-  var_dump($result);
+
+  foreach($result as $key => $value) {
+    echo $value["id"] . ":" . $value["name"];
+  }
 } catch (PDOException $e) {
   echo $e;
   exit;

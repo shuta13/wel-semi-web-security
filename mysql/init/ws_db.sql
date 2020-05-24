@@ -38,7 +38,7 @@ CREATE TABLE `ws_table` (
 
 LOCK TABLES `ws_table` WRITE;
 /*!40000 ALTER TABLE `ws_table` DISABLE KEYS */;
-INSERT INTO `ws_table` VALUES (1,'Shuta');
+INSERT INTO `ws_table` VALUES (1,'shuta');
 /*!40000 ALTER TABLE `ws_table` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,3 +52,10 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2020-05-24  9:03:24
+
+-- added myself(shuta)
+LOCK TABLES `ws_table` WRITE;
+/*!40000 ALTER TABLE `ws_table` DISABLE KEYS */;
+INSERT INTO `ws_table` VALUES (2,'hide');
+/*!40000 ALTER TABLE `ws_table` ENABLE KEYS */;
+UNLOCK TABLES;
