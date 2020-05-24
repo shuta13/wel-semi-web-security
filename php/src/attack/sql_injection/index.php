@@ -2,13 +2,15 @@
   <h2> SQLインジェクション </h2>
 
   <p>
-    <i>フォームに入力した値でデータベース内部のデータ操作する攻撃</i><br />
+    <i>不正なパラメーターでSQL命令を生成し、データベースを攻撃</i><br />
   </p>
 
-  <h3>以下のIDとその他やばい感じの文字列で検索</h3>
+  <p style="color: gray;">
+    <i>以下の単語で検索する</i>
+  </p>
 
   <ul>
-    <li>3</li>
+    <li>1 ~ 5</li>
     <li>0 OR TRUE; --</li>
     <li>0 OR TRUE; DELETE FROM ws_table; --</li>
   </ul>
@@ -18,6 +20,7 @@
     <input type="submit" value="検索" />
   </form>
 
+  <h3>検索結果</h3>
   <table border="1">
     <tr>
       <th>id</th>
