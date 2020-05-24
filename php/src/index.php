@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <title>welcome-seminar-2020</title>
   </head>
-  <body>
-    <h2>PHPで学ぶWebセキュリティ @welcome-seminar-2020</h2>
-  </body>
 </html>
 
 <?php

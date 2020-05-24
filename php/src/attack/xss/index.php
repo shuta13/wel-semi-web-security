@@ -37,4 +37,6 @@
     <?=$comment ?>
   </p>
 
+  <a href="http://localhost:8080">戻る</a>
+
 </div>

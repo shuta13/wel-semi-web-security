@@ -6,11 +6,11 @@
   </p>
 
   <p style="color: gray;">
-    <i>以下の単語で検索する</i>
+    <i>CSRF攻撃で使ったDBから以下の条件で検索する</i>
   </p>
 
   <ul>
-    <li>1 ~ 5</li>
+    <li>好きな数字(idが存在する場合は検索結果に表示)</li>
     <li>0 OR TRUE; --</li>
     <li>0 OR TRUE; DELETE FROM ws_table; --</li>
   </ul>
@@ -58,4 +58,7 @@
       }
     ?>
   </table>
+
+  <a href="http://localhost:8080">戻る</a>
+
 </div>
