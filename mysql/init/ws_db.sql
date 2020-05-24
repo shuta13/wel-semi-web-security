@@ -55,7 +55,17 @@ UNLOCK TABLES;
 
 -- added myself(shuta)
 LOCK TABLES `ws_table` WRITE;
-/*!40000 ALTER TABLE `ws_table` DISABLE KEYS */;
 INSERT INTO `ws_table` VALUES (2,'hide');
-/*!40000 ALTER TABLE `ws_table` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `ws_table` WRITE;
+INSERT INTO `ws_table` VALUES (3,'Jojo');
+UNLOCK TABLES;
+
+LOCK TABLES `ws_table` WRITE;
+INSERT INTO `ws_table` VALUES (4,'Dio');
+UNLOCK TABLES;
+
+LOCK TABLES `ws_table` WRITE;
+INSERT INTO `ws_table` VALUES (5,'Speedwagon');
 UNLOCK TABLES;

@@ -9,7 +9,7 @@
       </a>
     </li>
   </ul>
-  <h3>インデックス</h3>
+  <h3>行う攻撃</h3>
   <ul>
     <li>
       <a href="/attack/xss/index.php">XSS(クロスサイトスクリプティング)</a>

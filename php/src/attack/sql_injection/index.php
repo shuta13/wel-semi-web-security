@@ -5,10 +5,19 @@
     <i>フォームからデータベースのデータをふっとばす攻撃を行う</i><br />
   </p>
 
-  <h3>入力フォーム</h3>
+  <h3>以下のIDとその他やばい感じの文字列で検索</h3>
 
+  <ul>
+    <li>3</li>
+    <li>0 OR TRUE; --</li>
+    <li>0 OR TRUE; DELETE FROM ws_table; --</li>
+  </ul>
 
-  <h3>データベース内のデータ<h3>
+  <form method="POST" action="index.php">
+    <input type="text" name="id" />
+    <input type="submit" value="検索" />
+  </form>
+
   <table border="1">
     <tr>
       <th>id</th>
@@ -20,15 +29,16 @@
         $user = "root";
         $password = "root";
         $db = new PDO($dsn, $user, $password);
+
+        $id = $_POST["id"];
       
-        $sql = "SELECT * FROM ws_table";
+        // 検索用クエリ
+        $sql = "SELECT * FROM ws_table WHERE id = " . $id . ";";
+
         $stt = $db->prepare($sql);
         $stt->execute();
-        // $result = $stt->fetchAll(PDO::FETCH_ASSOC);
-        // foreach($result as $key => $value) {
-        //   echo $value["id"] . ":" . $value["name"];
-        //   print "<br />";
-        // }
+
+        // 検索結果をwhileで表示
         while ($result = $stt->fetchAll(PDO::FETCH_ASSOC)) {
           foreach($result as $value) {
     ?>
